@@ -6,5 +6,5 @@ hamster
 mouse
 gold fish
 tiger
-bb
-peroquet
+lama
+alpaga

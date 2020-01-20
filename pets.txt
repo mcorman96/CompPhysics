@@ -2,3 +2,7 @@ canari
 cat
 dog
 groundhog
+hamster
+mouse
+gold fish
+tiger

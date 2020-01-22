@@ -2,3 +2,6 @@ canari
 cat
 dog
 groundhog
+butterfly
+mouse
+moose

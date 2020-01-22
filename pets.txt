@@ -5,3 +5,9 @@ groundhog
 butterfly
 mouse
 moose
+hamster
+mouse
+gold fish
+tiger
+lama
+alpaga

@@ -1,0 +1,89 @@
+git clone url creates clone of repository on git on local interface
+
+cd shinydoodle/ go to directory where repository is
+nona/vim name.txt create a txt file
+write a bunch of stuff
+Ctrl X , Y, enter closes your file
+
+git status gives status of directory
+git add add file to directory
+git commit commit it
+git push places it on github
+
+cat name.txt shows file in terminal
+
+Say you change something to your file but on github (add stuff to bottom)
+You then need to commit it to master branch
+
+But say you also change stuff in file in terminal by doing:
+nano name.txt
+add stuff to top
+git commit -a -m "message" equivalent of git add then git commit
+
+git log shows whatever you've been doing
+
+Try git push but it will fail
+Instead type git pull this brings the github change to terminal
+cat name.txt
+then do git push so that both changes are in terminal and in github
+
+Note: if you had added stuff in github and terminal both at bottom then would get an error
+Git pull gives error but opportunity to resolve conflict
+git commit -a -m "" after resolving conflict
+git log
+
+history gives history of all commands
+
+Say you want to collaborate. Go to Github
+Settings -- Collaborators : invite benji
+Then go to terminal
+cd go back to home directory
+git clone Benji's
+cd automatic-robot/
+nano pets.txt will show his list of pets which you can now modify as if it was yours
+
+Note if you two changes but only one to keep trace of one commit you do
+git commit --ammend this will change commit
+
+Now let's say you want to go back to some earlier commit version:
+git log this will show all your commits and their strings
+git checkout/switch <string> will go back to previous commit on master branch
+
+Now let's create a sub branch:
+git switch -c <sub> this creates a new subbranch with name <sub> which is a copy of the master branch
+git switch <master/sub> switches between the branches
+git branch shows the branches that exist and the one you are in is shown with star
+
+Let's now do some changes to the sub branch with the ultimate goal to merge them to the master branch
+git switch sub
+nano name.txt
+et. as usual
+git diff shows difference between branches
+git switch master will give error because haven't committed yet
+git commit -a -m ""
+git status
+
+Say we want to add another file to sub branch for some reason
+nano name1.txt create file
+git commit -a -m ""
+
+Now let's send branch to github
+git push won't work but it suggests git push --set upstream origin <sub> which you should do
+On Github you should do the following:
+Pull request -- compare pull request -- create pull request --
+resolve conflict because each branch has name.txt file which is different now
+commit merge
+merge pull request
+confirm merge
+
+Now go back to terminal
+git switch master
+git pull this takes branch from github to terminal
+
+Say you want to add a tag to version because it is a good one
+git tage -a <name>
+git push --tags will put them on github
+git describe gives the tags
+then say you make changes and commit them then when you do git describe will get a number 1 behind tag
+go on github:
+releases will show your tags
